@@ -7,7 +7,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
     mode: 'development',
     resolve: {
@@ -31,7 +32,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.(css|scss)$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -53,6 +54,7 @@ module.exports = {
         //contentBase: path.join(__dirname, 'dist'), COMMENTED, THROWS ERROR!
         allowedHosts: path.join(__dirname, 'dist'),
         compress: true,
-        port: 3005
+        port: 3005,
+        historyApiFallback: true,
     }
 }
