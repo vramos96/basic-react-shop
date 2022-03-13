@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React eShop",
   "main": "src/index.js",
-  "homepage": "https://vramos96.github.io/basic-react-shop/",
+  "homepage": "https://vramos96.github.io/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
