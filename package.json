@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "React eShop",
   "main": "src/index.js",
-  "homepage": "https://vramos96.github.io/",
+  "homepage": "https://vramos96.github.io/basic-react-shop",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [
     "react",
