@@ -2,15 +2,16 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const REMOTE_REPO_NAME = 'basic-react-shop';
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        //filename: 'bundle.js',
-        //publicPath: '/'
-        filename: 'basic-react-shop/bundle.js',
-        publicPath: '/basic-react-shop/'
+        //filename: "bundle.js",                              //for development
+        //publicPath: "/",                                    //for development
+        filename: `${REMOTE_REPO_NAME}/bundle.js`,        //for production
+        publicPath: `/${REMOTE_REPO_NAME}/`,              //for production
     },
     resolve: {
         extensions: ['.js', '.jsx'],
