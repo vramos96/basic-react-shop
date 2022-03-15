@@ -14,12 +14,15 @@ import NotFound from '@pages/NotFound'
 import AppContext from '@context/AppContext'
 import useInitialState from '@hooks/useInitialState'
 import '@styles/global.css'
+const REMOTE_REPO_NAME = 'basic-react-shop';
 
 const App = () => {
 	const initialState = useInitialState()
+	//const ROUTER_BASENAME =  "/"; 						//for development
+	const ROUTER_BASENAME =  `/${REMOTE_REPO_NAME}`; 	//for production
 	return (
 		<AppContext.Provider value={initialState}>
-			<BrowserRouter>
+			<BrowserRouter basename={ROUTER_BASENAME}>
 				<Layout>
 					<Routes>
 						<Route exact path="/" element={<Home />} />
